@@ -5,9 +5,9 @@ class MyExamplesController < ApplicationController
   end
 
   def fortune
-    your_fortune = "outlook not so good"
+    your_fortune = ["outlook not so good", "you will fall in love today", "things are looking up"]
     # Feature 1: The page should return a random fortune. Every time you refresh the page, you’ll get a new fortune. You should make up at least 3 different fortunes.
-    render json: { message: "You're future: #{your_fortune}" }
+    render json: { message: "You're future: #{your_fortune.sample}" }
   end
 
   def lottery
@@ -17,9 +17,9 @@ class MyExamplesController < ApplicationController
     render json: { message: "Your lotto numbers this week are: #{lotto_numbers}" }
   end
 
-  def pagecount
-   # Feature 3: Every time a user visits/refreshes the page, the page should tell the user the number of visits made to that page so far. NOTE: This is impossible, but you should try your hand at this for a few minutes to discover why it’s impossible.
-   counter = .count
-    render(json: { message: counter})
-  end
+  #   def pagecount
+  #    # Feature 3: Every time a user visits/refreshes the page, the page should tell the user the number of visits made to that page so far. NOTE: This is impossible, but you should try your hand at this for a few minutes to discover why it’s impossible.
+  #    counter = .count
+  #     render(json: { message: counter})
+  #   end
 end
